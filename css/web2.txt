@@ -1,0 +1,45 @@
+
+
+
+
+li {
+    --move-in-animate:0.5s;
+    position: relative;
+    list-style: none;
+    float: left;
+    margin: 5px;
+    border: 10px solid #ccc;
+    overflow: hidden;
+    height: 550px;
+}
+
+img{
+    transition: all var(--move-in-animate) ;
+}
+li:hover img{
+    transform: translateY(-50px);
+}
+
+
+
+
+p {
+    --font-size: 100px;
+    color:white;
+    display: block;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: calc(50% - var(--font-size)/2);
+    left: calc(50% - var(--font-size)/2);
+    font-size: var(--font-size);
+    text-align: center;
+    font-family: "楷体";
+    transition: all var(--move-in-animate) ;
+    transform: rotateZ(-45deg) scale(0);
+    margin: 0;
+}
+
+li:hover p{
+    transform: rotateZ(0deg) scale(1);
+}
